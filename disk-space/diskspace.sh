@@ -7,7 +7,7 @@ case $DISKSPACE in
 		echo "Emergency! Disk is full!" | mail -s "Disk emergency" dennis.perrone@gmail.com
 		;;
 	[1-7]*[0-9])
-		echo "Lots of space left"
+		echo "Lots of space left, the disk is currently $DISKSPACE% full."
 		;;
 	[8-9]*)
 		echo "I am at least 80% full."
