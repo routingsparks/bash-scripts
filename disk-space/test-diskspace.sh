@@ -10,13 +10,13 @@ case $ROOTDIRSPACE in
 		echo "The / partition is full."
 		echo "Emergency! Disk is full!" | mail -s "Disk emergency" root@localhost
         ;;
-    [0]*[1-9])
-        echo "The / partion is currently under 10%."
-        ;;
+  [0]*[1-9])
+      echo "The / partion is currently under 10%."
+    ;;
 	[1-7]*[0-9])
 		echo "The / partition is currently $ROOTDIRSPACE% full."
 		;;
-	[8-9]*)
+	[8-9]*[0-9])
 		echo "Start clearing files. I am currently $ROOTDIRSPACE% full."
 		;;
 	*)
@@ -25,20 +25,20 @@ esac
 
 case $HOMEDIRSPACE in
 	100)
-		echo "The / partition is full."
+		echo "The /home partition is full."
 		echo "Emergency! Disk is full!" | mail -s "Disk emergency" root@localhost
-		;;
-    [1-9]*)
-        echo "The /home partition is under 10% currently $HOMEDIRSPACE% full."
+        ;;
+    [0]*[1-9])
+        echo "The / partion is currently under 10% at $HOMEDIRSPACE%."
         ;;
 	[1-7]*[0-9])
-		echo "The /home partition is currently $HOMEDIRSPACE% full."
+		echo "The / partition is currently $HOMEDIRSPACE% full."
 		;;
 	[8-9]*[0-9])
-		echo "Start clearing files. The /home partition is  currently $HOMEDIRSPACE% full."
+		echo "Start clearing files. I am currently $HOMEDIRSPACE% full."
 		;;
 	*)
-		echo "Hmm, I expected to see some kind of percentage."
+		echo "Hmm, I expected to see some kind of percentage in /home."
 esac
 
 case $BOOTDIRSPACE in
@@ -51,11 +51,10 @@ case $BOOTDIRSPACE in
         ;;
 	[1-7]*[0-9])
 		echo "The /boot partition is currently $BOOTDIRSPACE% full."
-		;;
+        ;;
 	[8-9]*[0-9])
 		echo "Start clearing files. The /boot partition is  currently $BOOTDIRSPACE% full."
 		;;
 	*)
 		echo "Hmm, I expected to see some kind of percentage."
 esac
-
