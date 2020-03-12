@@ -21,7 +21,8 @@
 #####################################################################
 
 BACKDIR=$HOME/backups
-USBDIR=/run/media/$USER/USB-DISK/linux-backups
+#USBDIR=/run/media/$USER/USB-DISK/linux-backups
+USBDIR=/mnt/usbstick/linux-backups
 DATE=`date +%Y%m%d`
 
 backup_directories(){
