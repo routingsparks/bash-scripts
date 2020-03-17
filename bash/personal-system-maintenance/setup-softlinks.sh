@@ -29,9 +29,9 @@ elif [[ ! -h $HOME/.bash_profile ]]; then
 #elif [[ ! -h $HOME/.tmux.conf ]]; then
 #    ln -s $DOT_DIR/tmux-configs/tmux.conf-20200301 $HOME/.tmux.conf
 #    echo "tmux config link is created."
-elif [[ ! -h $HOME/,config/i3 ]]; then
-    ln -s $DOT_DIR/i3-configs/ $HOME/.config/i3
-    echo "i3 config link is created."
+#elif [[ ! -h $HOME/,config/i3 ]]; then
+#    ln -s $DOT_DIR/i3-configs/ $HOME/.config/i3
+#    echo "i3 config link is created."
 else
     echo "link is already created."
 fi
@@ -100,4 +100,4 @@ config_links
 ansible_link
 programming_links
 vim_link
-vimwiki_links
+#vimwiki_links

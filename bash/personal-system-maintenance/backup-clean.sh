@@ -1,7 +1,8 @@
 #!/bin/bash
 
 BACK_DIR="$HOME/backups"
-USB_DIR="/mnt/usbstick/linux-backups/"
+#USB_DIR="/mnt/usbstick/linux-backups/"
+USB_DIR="/run/media/$USER/USB-DISK/linux-backups/"
 
 #find $BACK_DIR -mtime +7 -type f -delete
 

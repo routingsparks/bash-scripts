@@ -21,8 +21,8 @@
 #####################################################################
 
 BACKDIR=$HOME/backups
-#USBDIR=/run/media/$USER/USB-DISK/linux-backups
-USBDIR=/mnt/usbstick/linux-backups
+USBDIR=/run/media/$USER/USB-DISK/linux-backups
+#USBDIR=/mnt/usbstick/linux-backups
 DATE=`date +%Y%m%d`
 
 backup_directories(){
@@ -53,7 +53,7 @@ backup_directories(){
 }
 
 function config_backup() {
-    cd $HOME && tar -czpf $BACKDIR/config-backups/config-$DATE.tar.gz -C $HOME/ {.tmux.conf,.config/hexchat/}
+#    cd $HOME && tar -czpf $BACKDIR/config-backups/config-$DATE.tar.gz -C $HOME/ {.tmux.conf,.config/hexchat/}
     cd $HOME && tar -czpf $BACKDIR/config-backups/vim-$DATE.tar.gz -C $HOME/ .vim/
     cd $HOME && tar -czpf $BACKDIR/config-backups/bash-$DATE.tar.gz -C $HOME {.bash_profile,.bashrc}
     more /etc/hosts > $BACKDIR/config-backups/host-file-$DATE.bak
