@@ -12,7 +12,7 @@
 # Variables
 ################################################################################
 DOC_DIR=$HOME/documents
-GIT_DIR=$HOME/git-repos
+GIT_DIR=$HOME/development
 DOT_DIR=$GIT_DIR/dot-files
 PROGRAMMING_DIR=$HOME/programming
 VIMWIKI_DIR=$HOME/vimwiki
